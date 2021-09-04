@@ -24,7 +24,7 @@ jobs:
         node-version: 15.x
     
     - name: Install yarn packages
-      run: yarn ci
+      run: yarn install
     
     - name: Build project
       run: yarn run build
