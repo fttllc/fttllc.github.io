@@ -4,15 +4,19 @@
 
 .App-header {
   background-color: #aa964d;
-  min-height: 5vh;
+  /* min-height: 5vh;
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
   align-items: left;
   justify-content: top;
   text-align: left;
   color: #ffffffe0;
   font-family: Montserrat;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 2vmin); */
+}
+.menutButton {
+  margin-right: 2;
 }
 
 .App-body {
@@ -29,6 +33,8 @@
 
 .logo {
   padding-left: 5px;
+  padding-right: 5px;
+  /* flex-grow: 1; */
 }
 
 .App-link {
