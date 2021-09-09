@@ -1,31 +1,49 @@
-import React from 'react';
-import './App.css';
+import { mainStyle, mainTheme } from './styles/Default';
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid'
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
+import ThemeProvider from '@material-ui/styles/ThemeProvider';
+import HomeCard from './components/Cards';
+import { CssBaseline } from '@material-ui/core';
+import { cardData } from './config';
 
 function App() {
-  
+  const theme = mainTheme;
+  const style = mainStyle(theme)
+
   return (
-    <div className="App">
-      <AppBar className="App-header" position="static">
-        <Toolbar className="App-header">
-          <Button className="menuButton" color="inherit">  
-            <Typography variant="h4" className="logo" align="left">
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <AppBar color="primary" position="sticky">
+        <Toolbar>
+          <Button>  
+            <Typography className={style.logoButton} variant="h4" align="left">
                 FTT, LLC
             </Typography>
           </Button>
         </Toolbar>
       </AppBar>
-      <div className="App-body">
-        <div>
-          <p>
-              Site is under construction. Please check back soon.
-          </p>
-        </div>
-      </div>
-    </div>
+      <Grid container className={style.main}>
+        <Grid item>
+        </Grid>
+        <Grid item>
+          <Grid container justifyContent="center" spacing={1}>
+            {cardData.map((value, index) => (
+              <Grid key={index} item>
+                <HomeCard heading={value.heading} desc={value.desc} />
+              </Grid>
+            ))}
+          </Grid>
+        </Grid>
+      </Grid>
+      <AppBar position="fixed" className={style.bottomBar}>
+        <Toolbar>
+
+        </Toolbar>
+      </AppBar>
+    </ThemeProvider>
   );
 }
 
