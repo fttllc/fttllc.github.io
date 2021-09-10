@@ -49,6 +49,10 @@ export const mainStyle = makeStyles((theme: Theme) =>
         minHeight: '100vh',
         display: 'flex'
     },
+    topAppBar: {
+        minHeight: '50px',
+        color: "primary"
+    },
     content: {
         paddingTop: 10,
         padding: 10,
@@ -67,7 +71,7 @@ export const mainStyle = makeStyles((theme: Theme) =>
     bottomBar: {
         background: TERTIARY_COLOR,
         width: '100vw',
-        maxHeight: '50px',
+        // maxHeight: '50px',
         top: 'auto',
         bottom: '0px',
         position: 'static',

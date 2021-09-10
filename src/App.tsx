@@ -17,7 +17,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Grid className={style.main}>
-        <AppBar color="primary" position="static">
+        <AppBar position="static" className={style.topAppBar}>
           <Toolbar>
             <Button>  
               <Typography className={style.logoButton} variant="h4" align="left">
