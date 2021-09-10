@@ -16,36 +16,37 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <AppBar color="primary" position="sticky">
-        <Toolbar>
-          <Button>  
-            <Typography className={style.logoButton} variant="h4" align="left">
-                FTT, LLC
-            </Typography>
-          </Button>
-        </Toolbar>
-      </AppBar>
-      <Grid container className={style.main}>
-        <Grid item>
-        </Grid>
-        <Grid item>
-          <Grid container justifyContent="center" spacing={1}>
-            {cardData.map((value, index) => (
-              <Grid key={index} item>
-                <HomeCard heading={value.heading} desc={value.desc} />
-              </Grid>
-            ))}
+      <Grid className={style.main}>
+        <AppBar color="primary" position="static">
+          <Toolbar>
+            <Button>  
+              <Typography className={style.logoButton} variant="h4" align="left">
+                  FTT, LLC
+              </Typography>
+            </Button>
+          </Toolbar>
+        </AppBar>
+        <Grid container className={style.content}>
+          <Grid item>
+          </Grid>
+          <Grid item>
+            <Grid container justifyContent="center" spacing={1}>
+              {cardData.map((value, index) => (
+                <Grid key={index} item>
+                  <HomeCard heading={value.heading} desc={value.desc} />
+                </Grid>
+              ))}
+            </Grid>
           </Grid>
         </Grid>
+        <AppBar position="static" className={style.bottomBar}>
+            <Toolbar className={style.bottomBar}>
+              <Typography variant="body1">
+                © 2021 FTT, LLC
+              </Typography>
+            </Toolbar>
+        </AppBar>
       </Grid>
-      
-      <AppBar position="static" className={style.bottomBar}>
-          <Toolbar className={style.bottomBar}>
-            <Typography variant="body1">
-              © 2021 FTT, LLC
-            </Typography>
-          </Toolbar>
-      </AppBar>
     </ThemeProvider>
   );
 }
