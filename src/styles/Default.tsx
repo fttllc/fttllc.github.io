@@ -48,13 +48,24 @@ export const mainStyle = makeStyles((theme: Theme) =>
         paddingTop: 10,
         padding: 10,
     },
-    bottomBar: {
-        top: 'auto',
-        bottom: 0,
-        background: TERTIARY_COLOR
-    },
     logoButton: {
         color: TEXT_COLOR
-    }
+    },
+    bottomAppBar: {
+        top: 'auto',
+        bottom: '0px',
+        position: 'absolute',
+    },
+    bottomBar: {
+        background: TERTIARY_COLOR,
+        width: '100vw',
+        maxHeight: '100px',
+        top: 'auto',
+        bottom: '0px',
+        position: 'absolute',
+        // textAlign: 'center',
+        // flexDirection: 'column',
+        display: 'flex'
+    },
   }),
 );

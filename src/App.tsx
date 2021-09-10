@@ -38,10 +38,13 @@ function App() {
           </Grid>
         </Grid>
       </Grid>
-      <AppBar position="fixed" className={style.bottomBar}>
-        <Toolbar>
-
-        </Toolbar>
+      
+      <AppBar position="static" className={style.bottomBar}>
+          <Toolbar className={style.bottomBar}>
+            <Typography variant="body1">
+              © 2021 FTT, LLC
+            </Typography>
+          </Toolbar>
       </AppBar>
     </ThemeProvider>
   );
