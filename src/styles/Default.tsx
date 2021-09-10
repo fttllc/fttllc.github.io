@@ -3,7 +3,7 @@ import { createStyles, createTheme, makeStyles, Theme } from '@material-ui/core/
 const PRIMARY_COLOR = '#5cdb9f';
 const SECONDARY_COLOR = '#3a6d91';
 const TERTIARY_COLOR = '#379680';
-const CARD_BACKGROUND =  SECONDARY_COLOR; //'#ffff00'
+const CARD_BACKGROUND =  SECONDARY_COLOR;
 const TEXT_COLOR = '#edf5e0';
 
 export const mainTheme = createTheme({
@@ -60,18 +60,16 @@ export const mainStyle = makeStyles((theme: Theme) =>
         flex: 1
     },
     logoButton: {
-        color: TEXT_COLOR
+        color: TEXT_COLOR,
+        textShadow: `2px 2px ${TERTIARY_COLOR};`
     },
     bottomAppBar: {
         top: 'auto',
         bottom: '0px',
-        // display: 'block',
-        // flexGrow: 1
       },
     bottomBar: {
         background: TERTIARY_COLOR,
         width: '100vw',
-        // maxHeight: '50px',
         top: 'auto',
         bottom: '0px',
         position: 'static',
