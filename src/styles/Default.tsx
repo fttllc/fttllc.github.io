@@ -54,7 +54,7 @@ export const mainStyle = makeStyles((theme: Theme) =>
         color: "primary"
     },
     content: {
-        paddingTop: 10,
+        paddingTop: 20,
         padding: 10,
         display: 'flex',
         flex: 1
