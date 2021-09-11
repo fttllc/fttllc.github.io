@@ -1,12 +1,10 @@
 import { mainStyle, mainTheme } from './styles/Default';
-import AppBar from '@material-ui/core/AppBar';
-import Button from '@material-ui/core/Button';
-import Grid from '@material-ui/core/Grid'
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
 import ThemeProvider from '@material-ui/styles/ThemeProvider';
 import HomeCard from './components/Cards';
 import { CssBaseline } from '@material-ui/core';
+import TopBar from './components/TopBar'
+import FooterBar from './components/FooterBar'
 import { cardData } from './config';
 
 function App() {
@@ -17,18 +15,8 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Grid className={style.main}>
-        <AppBar position="static" className={style.topAppBar}>
-          <Toolbar>
-            <Button>  
-              <Typography className={style.logoButton} variant="h4" align="left">
-                  FTT, LLC
-              </Typography>
-            </Button>
-          </Toolbar>
-        </AppBar>
+        <TopBar logoText="FTT, LLC"/>
         <Grid container className={style.content}>
-          <Grid item>
-          </Grid>
           <Grid item>
             <Grid container justifyContent="center" spacing={1}>
               {cardData.map((value, index) => (
@@ -39,13 +27,7 @@ function App() {
             </Grid>
           </Grid>
         </Grid>
-        <AppBar position="static" className={style.bottomBar}>
-            <Toolbar className={style.bottomBar}>
-              <Typography variant="body1">
-                © 2021 FTT, LLC
-              </Typography>
-            </Toolbar>
-        </AppBar>
+        <FooterBar />
       </Grid>
     </ThemeProvider>
   );
