@@ -13,3 +13,7 @@ export const cardData = [
       desc: 'Building faith one project at a time.'
     },
   ]
+
+export const missionStatement = {
+  
+}
