@@ -2,7 +2,7 @@
 export const cardData = [
     {
       heading: 'Passion',
-      desc: 'Bringing our love into work everyday.'
+      desc: 'Bringing our love into work every day.'
     },
     {
       heading: 'Ownership',
